@@ -1770,7 +1770,7 @@
   </div>
   <div class="contact-grid" style="grid-template-columns:1fr;">
     <div>
-      <p class="contact-intro">Disponible pour une opportunité dès [mois de fin de master].<br>Parlons-en.</p>
+      <p class="contact-intro">Disponible pour une opportunité dès septembre 2026.<br>Parlons-en.</p>
       <div class="contact-links">
         <a href="mailto:charlotte.labreze@gmail.com" class="contact-link">
           <span class="contact-link-icon">✉</span>
@@ -1792,7 +1792,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2025 Charlotte Labreze – Tous droits réservés</span>
+  <span>© 2026 Charlotte Labreze – Tous droits réservés</span>
   <div style="display:flex;gap:1.5rem;">
     <a href="https://www.linkedin.com/in/charlotte-labreze-9406b7294" target="_blank">LinkedIn</a>
     <a href="mailto:charlotte.labreze@gmail.com">Email</a>
@@ -1941,75 +1941,4 @@ document.addEventListener('keydown', function(e) {
 </script>
 
 </body>
-</html<div class="projets-grid">
-    
-  </div>`;
-  }
-  document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function fermerModal(e) {
-  if (e.target === document.getElementById('modal-overlay')) fermerModalBtn();
-}
-
-function fermerModalBtn() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function filtrer(cat, btn) {
-  document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  const cards = document.querySelectorAll('.projet-card');
-  cards.forEach(card => {
-    const match = cat === 'tous' || card.dataset.cat === cat;
-    if (match) {
-      card.style.display = '';
-      requestAnimationFrame(() => {
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      });
-    } else {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(8px)';
-      setTimeout(() => {
-        if (card.style.opacity === '0') card.style.display = 'none';
-      }, 280);
-    }
-  });
-}
-
-function toggleExp(header) {
-  const body = header.nextElementSibling;
-  const arrow = header.querySelector('.exp-arrow');
-  const isOpen = body.classList.contains('open');
-  document.querySelectorAll('.exp-body.open').forEach(b => {
-    b.classList.remove('open');
-    b.previousElementSibling.querySelector('.exp-arrow').textContent = '+';
-  });
-  if (!isOpen) {
-    body.classList.add('open');
-    arrow.textContent = '−';
-  }
-}
-
-function togglePdfViewer(id, titre) {
-  var viewer = document.getElementById(id);
-  viewer.classList.toggle('open');
-}
-
-function closePdfViewer(id) {
-  document.getElementById(id).classList.remove('open');
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') fermerModalBtn();
-});
-</script>
-
-</body>
-</html<div class="projets-grid">
-    
-
-  >
+</html>
