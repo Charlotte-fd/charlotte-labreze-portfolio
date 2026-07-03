@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charlotte Labreze – Communication & Stratégie d'influence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --noir: #0F0F0F;
+    --or: #707CFF;
+    --or-light: #E8D5BA;
+    --gris: #6B6B6B;
+    --gris-clair: #F5F3F0;
+    --blanc: #FAFAF8;
+    --border: #E2DED8;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--blanc);
+    color: var(--noir);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 28px; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--noir);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .nav-links a:hover { color: var(--noir); }
+
+  .nav-cta {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--blanc) !important;
+    background: var(--noir);
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background var(--transition) !important;
+  }
+
+  .nav-cta:hover { background: var(--or) !important; color: var(--noir) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 6rem 4rem;
+    position: relative;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--or);
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--or);
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gris);
+    margin-bottom: 2.5rem;
+    line-height: 1.4;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    color: var(--gris);
+    max-width: 420px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--noir);
+    color: var(--blanc);
+    padding: 0.9rem 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: var(--transition);
+    border: 1px solid var(--noir);
+  }
+
+  .btn-primary:hover { background: var(--or); color: var(--noir); border-color: var(--or); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    color: var(--noir);
+    padding: 0.9rem 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+  }
+
+  .btn-secondary:hover { border-color: var(--noir); }
+
+  .hero-right {
+    background: var(--gris-clair);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    right: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    background: var(--blanc);
+    border: 1px solid var(--border);
+  }
+
+  .stat {
+    padding: 1.5rem;
+    border-right: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-link {
+    text-decoration: none;
+    color: inherit;
+    transition: background var(--transition), border-color var(--transition);
+    cursor: pointer;
+  }
+
+  .stat-link:hover {
+    background: var(--noir);
+  }
+
+  .stat-link:hover .stat-number,
+  .stat-link:hover .stat-label {
+    color: var(--blanc);
+  }
+
+  .stat-link {
+    display: block;
+    text-decoration: none;
+    transition: background var(--transition);
+  }
+
+  .stat-link:hover { background: var(--gris-clair); }
+
+  .stat-link:hover .stat-number { color: var(--or); }
+
+  .stat-link:hover .stat-arrow { opacity: 1; transform: translateY(0); }
+
+  .stat-arrow {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--or);
+    margin-top: 0.3rem;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: var(--transition);
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--noir);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.3rem;
+    transition: color var(--transition);
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-size: 14rem;
+    font-weight: 700;
+    color: rgba(200,168,130,0.08);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.05em;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 7rem 4rem; }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-num {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--or);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    margin-left: 1rem;
+  }
+
+  /* ── À PROPOS ── */
+  #apropos { background: var(--blanc); }
+
+  .apropos-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .apropos-text p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--gris);
+    margin-bottom: 1.5rem;
+  }
+
+  .apropos-text p strong {
+    color: var(--noir);
+    font-weight: 500;
+  }
+
+  .competences-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--noir);
+    margin-bottom: 1.5rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--gris);
+    transition: var(--transition);
+  }
+
+  .tag:hover { border-color: var(--or); color: var(--noir); }
+
+  .tag.highlight {
+    background: var(--noir);
+    color: var(--blanc);
+    border-color: var(--noir);
+  }
+
+  /* ── EXPÉRIENCES PRO ── */
+  #experiences { background: var(--gris-clair); }
+
+  .exp-list { display: flex; flex-direction: column; gap: 2px; }
+
+  .exp-item {
+    background: var(--blanc);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .exp-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+    cursor: pointer;
+  }
+
+  .exp-header:hover .exp-arrow { transform: rotate(45deg); }
+
+  .exp-logo-placeholder {
+    width: 52px;
+    height: 52px;
+    background: var(--gris-clair);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gris);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .exp-info { flex: 1; }
+
+  .exp-company {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .exp-role {
+    font-size: 0.85rem;
+    color: var(--gris);
+    margin-bottom: 0.4rem;
+  }
+
+  .exp-period {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--or);
+  }
+
+  .exp-arrow {
+    font-size: 1.2rem;
+    color: var(--gris);
+    transition: transform var(--transition);
+  }
+
+  .exp-body {
+    display: none;
+    padding: 0 2.5rem 2.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .exp-body.open { display: block; }
+
+  .exp-missions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--gris-clair);
+    border-radius: 2px;
+    color: var(--noir);
+    font-weight: 500;
+  }
+
+  .exp-pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--or);
+    text-decoration: none;
+    border: 1px solid var(--or);
+    padding: 0.55rem 1.2rem;
+    border-radius: 2px;
+    transition: var(--transition);
+    cursor: pointer;
+    background: none;
+  }
+
+  .exp-pdf-btn:hover { background: var(--or); color: var(--blanc); }
+
+  /* PDF Viewer */
+  .pdf-viewer {
+    display: none;
+    margin-top: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .pdf-viewer.open { display: block; }
+
+  .pdf-viewer iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+  }
+
+  .pdf-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    background: var(--gris-clair);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--gris);
+    font-weight: 500;
+  }
+
+  .pdf-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--gris);
+    padding: 0.2rem;
+    transition: color var(--transition);
+  }
+
+  .pdf-close:hover { color: var(--noir); }
+
+  /* ── PROJETS ── */
+  #projets { background: var(--blanc); }
+
+  .filtres {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .filtre-btn {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--gris);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .filtre-btn:hover, .filtre-btn.active {
+    background: var(--noir);
+    color: var(--blanc);
+    border-color: var(--noir);
+  }
+
+  .projets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .projet-card {
+    background: var(--gris-clair);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition), opacity 0.28s ease, transform 0.28s ease;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .projet-card:hover { border-color: var(--noir); }
+  .projet-card:hover .projet-overlay { opacity: 1; }
+  .projet-card:hover .projet-img-placeholder { transform: scale(1.03); }
+
+  .projet-card.hidden { display: none; }
+
+  .projet-img-placeholder {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(135deg, #E8E4DF 0%, #D5CFC7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .projet-img-letter {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(15,15,15,0.12);
+    user-select: none;
+  }
+
+  .projet-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15,15,15,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+
+  .projet-overlay span {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blanc);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+  }
+
+  .projet-info {
+    padding: 1.4rem 1.6rem;
+  }
+
+  .projet-cat {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 0.4rem;
+  }
+
+  .projet-name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    line-height: 1.25;
+  }
+
+  .projet-desc {
+    font-size: 0.8rem;
+    color: var(--gris);
+    line-height: 1.5;
+  }
+
+  .projet-reel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blanc);
+    background: var(--or);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    margin-top: 0.6rem;
+  }
+
+  /* Modal projet */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,15,15,0.85);
+    z-index: 200;
+    overflow-y: auto;
+    padding: 2rem;
+  }
+
+  .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+
+  .modal {
+    background: var(--blanc);
+    width: 100%;
+    max-width: 900px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .modal-cat {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gris);
+    padding: 0.3rem;
+    line-height: 1;
+    transition: color var(--transition);
+    flex-shrink: 0;
+  }
+
+  .modal-close:hover { color: var(--noir); }
+
+  .modal-body { padding: 2.5rem; }
+
+  .etude-cas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .etude-block { }
+
+  .etude-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 0.5rem;
+  }
+
+  .etude-content {
+    font-size: 0.92rem;
+    color: var(--gris);
+    line-height: 1.7;
+  }
+
+  .modal-pdf-section { margin-top: 1rem; }
+
+  .modal-pdf-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--noir);
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .modal-pdf-viewer {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .modal-pdf-viewer iframe {
+    width: 100%;
+    height: 650px;
+    border: none;
+    display: block;
+  }
+
+  .pdf-placeholder {
+    height: 300px;
+    background: var(--gris-clair);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--gris);
+  }
+
+  .pdf-placeholder-icon {
+    font-size: 2.5rem;
+    opacity: 0.4;
+  }
+
+  .pdf-placeholder p {
+    font-size: 0.85rem;
+    text-align: center;
+    max-width: 280px;
+    line-height: 1.6;
+  }
+
+  .pdf-upload-btn {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--noir);
+    border: 1px solid var(--noir);
+    padding: 0.55rem 1.2rem;
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .pdf-upload-btn:hover { background: var(--noir); color: var(--blanc); }
+
+  /* ── CV ── */
+  #cv { background: var(--noir); color: var(--blanc); }
+
+  #cv .section-title { color: var(--blanc); }
+  #cv .section-num { color: var(--or); }
+  #cv .section-line { background: rgba(255,255,255,0.1); }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    max-width: 700px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 2.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .timeline-item:last-child { padding-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.4rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--or);
+    border: 2px solid var(--noir);
+    box-shadow: 0 0 0 3px rgba(200,168,130,0.25);
+  }
+
+  .timeline-date {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--blanc);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-company {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.6rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    max-width: 500px;
+  }
+
+  .cv-download {
+    margin-top: 3.5rem;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--gris-clair); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-intro {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--noir);
+    margin-bottom: 2rem;
+  }
+
+  .contact-links { display: flex; flex-direction: column; gap: 0.8rem; }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--gris);
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    background: var(--blanc);
+    border-radius: 2px;
+    transition: var(--transition);
+  }
+
+  .contact-link:hover { border-color: var(--noir); color: var(--noir); }
+
+  .contact-link-icon { font-size: 1.1rem; width: 24px; text-align: center; }
+
+  .form { display: flex; flex-direction: column; gap: 1rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .form-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--noir);
+  }
+
+  .form-input, .form-textarea {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: var(--blanc);
+    color: var(--noir);
+    transition: border-color var(--transition);
+    outline: none;
+    resize: vertical;
+  }
+
+  .form-input:focus, .form-textarea:focus { border-color: var(--noir); }
+
+  .form-textarea { min-height: 130px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--noir);
+    color: rgba(255,255,255,0.4);
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+  }
+
+  footer a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color var(--transition); }
+  footer a:hover { color: var(--or); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .fade-up-1 { animation-delay: 0.1s; }
+  .fade-up-2 { animation-delay: 0.25s; }
+  .fade-up-3 { animation-delay: 0.4s; }
+  .fade-up-4 { animation-delay: 0.55s; }
+  .fade-up-5 { animation-delay: 0.7s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    #hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 7rem 1.5rem 3rem; }
+    .hero-right { min-height: 260px; }
+    section { padding: 4rem 1.5rem; }
+    .apropos-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .projets-grid { grid-template-columns: 1fr 1fr; }
+    .etude-cas { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    .projets-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .stat { border-right: none; border-bottom: 1px solid var(--border); }
+  }
+
+
+</style>
+</head>
+<body>
+<div id="copyright-banner" style="position:fixed;top:0;left:0;right:0;z-index:200;background:#0F0F0F;color:#9A9A9A;text-align:center;font-size:0.68rem;letter-spacing:0.06em;padding:0.45rem 2rem;">Ce portfolio et l'ensemble de son contenu sont protégés par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</div>
+
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Charlotte Labreze</a>
+  <ul class="nav-links">
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#experiences">Expériences</a></li>
+    <li><a href="#projets">Projets</a></li>
+
+    <li><a href="#cv">Parcours</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow fade-up fade-up-1">Communication · Marketing · Création de contenu · Événementiel</div>
+    <h1 class="hero-title fade-up fade-up-2">Charlotte<br>Labreze</h1>
+    <p class="hero-subtitle fade-up fade-up-3">Chargée de communication & stratégie d'influence</p>
+    <p class="hero-desc fade-up fade-up-4">Conception de stratégies de communication qui font sens, du digital à l'événementiel, en passant par la marque employeur.</p>
+    <div class="hero-actions fade-up fade-up-5">
+      <a href="#projets" class="btn-primary">Voir mes projets →</a>
+      <a href="https://drive.google.com/file/d/1REWmCQpluc2USgJTzEsARpSQnGHqjxr_/view?usp=sharing" target="_blank" class="btn-secondary">Télécharger mon CV</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://drive.google.com/thumbnail?id=1C2pZt6AyWuLpfehc5QLZ_i_xRRoDerc-&sz=w800" alt="Charlotte Labreze" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;">
+    <div class="hero-stats">
+      <a href="#experiences" class="stat stat-link">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Expériences</span>
+        <span class="stat-arrow">↓</span>
+      </a>
+      <a href="#projets" class="stat stat-link">
+        <span class="stat-number">33+</span>
+        <span class="stat-label">Projets</span>
+        <span class="stat-arrow">↓</span>
+      </a>
+      <a href="#projets" class="stat stat-link">
+        <span class="stat-number">7</span>
+        <span class="stat-label">Secteurs</span>
+        <span class="stat-arrow">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">À propos</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="apropos-grid">
+    <div class="apropos-text">
+      <p>Chargée de communication & Content Creator formée au pilotage et à la création de stratégies globales ainsi qu'à la création et à la rédaction de contenu.
+      <p>Mon parcours mêle <strong>expériences en entreprise</strong> (alternance en tant que Content Creator et Editor chez Coyote, stagiaire puis freelance en tant que Chargée de Communication et de Marketing pour une agence événementielle), <strong>engagement associatif</strong> en tant que Community Manager (CCFD Terre Solidaire) et <strong>projets académiques</strong> réalisés pour des clients réels et des contextes très différents les uns des autres.
+      <p>Ce qui me motive dans la com, c'est de <strong>raconter et promouvoir des histoires qui ont de l'impact</strong>, qu'il s'agisse de lancer un produit, de vendre des solutions, d'appuyer un propos commercial, ou d'engager une communauté.</p>
+    </div>
+    <div>
+      <p class="competences-title">Compétences</p>
+      <div class="tags">
+        <span class="tag highlight">Stratégie de communication</span>
+        <span class="tag highlight">Création de contenu</span>
+        <span class="tag highlight">Stratégie éditoriale</span>
+        <span class="tag highlight">Rédaction d'articles</span>
+        <span class="tag">Réseaux sociaux</span>
+        <span class="tag">Acquisition</span>
+        <span class="tag">SEO/GEO</span>
+        <span class="tag">Relations presse</span>
+        <span class="tag">Copywriting</span>
+        <span class="tag">Stratégie d'influence</span>
+        <span class="tag">Communication de crise</span>
+        <span class="tag">Événementiel</span>
+        <span class="tag">Motion design</span>
+        <span class="tag">Gamification</span>
+        <span class="tag">Vidéo d'animation</span>
+        <span class="tag">Gestion de projet</span>
+        <span class="tag">Rédaction d'articles</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPÉRIENCES PRO -->
+<section id="experiences">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Expériences</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="exp-list">
+
+    <!-- Coyote -->
+    <div class="exp-item">
+      <div class="exp-header" onclick="toggleExp(this)">
+        <div class="exp-logo-placeholder">Coyote<br>CBS</div>
+        <div class="exp-info">
+          <div class="exp-company">Coyote – Coyote Business Services</div>
+          <div class="exp-role">Alternance Création &amp; Édition de contenu</div>
+          <div class="exp-period">2024 – 2026 · Alternance</div>
+        </div>
+        <div class="exp-arrow">+</div>
+      </div>
+      <div class="exp-body">
+        <p style="font-size:0.92rem; color:var(--gris); line-height:1.8; margin-bottom:1rem;">
+          Au sein de la division B2B de Coyote, j'ai pris en charge l'ensemble de la production de contenus pour la marque Coyote Business Services – de la stratégie éditoriale à la réalisation des supports.
+        </p>
+        <div class="exp-missions" style="margin-bottom:1.8rem;">
+          <span class="mission-tag">LinkedIn B2B</span>
+          <span class="mission-tag">Rédaction articles web</span>
+          <span class="mission-tag">Supports commerciaux</span>
+          <span class="mission-tag">Vidéos &amp; démos</span>
+          <span class="mission-tag">Newsletter</span>
+          <span class="mission-tag">Présentation commerciale</span>
+          <span class="mission-tag">Catalogue produit</span>
+          <span class="mission-tag">Identité visuelle</span>
+        </div>
+
+        <!-- Réalisations Coyote -->
+        <div style="font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--or);margin-bottom:1rem;">Réalisations</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+
+          <a href="https://www.linkedin.com/company/10984047/admin/page-posts/published/" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Page LinkedIn CBS</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Gestion &amp; animation</div>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7351173827705380864" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Exemple de post</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Publication LinkedIn</div>
+            </div>
+          </a>
+
+          <a href="https://business-services.moncoyote.com/ressources/controlez-vos-consommations-de-carburant-au-reel" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Démo produit (Supademo)</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Contrôle des consommations carburant</div>
+            </div>
+          </a>
+
+          <a href="https://moncoyote-my.sharepoint.com/:v:/g/personal/clabreze_coyote-group_com/IQD2Il6CV8PhQqO01IBlF0v-AfSP-X2z7eb1Ix-msjMG-oQ" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Vidéo interne</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Création &amp; montage (Clipchamp)</div>
+            </div>
+          </a>
+
+          <a href="https://business-services.moncoyote.com/ressources/les-erreurs-les-plus-frequentes-en-gestion-de-flotte-automobile-et-comment-les-eviter" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Article de blog</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Gestion de flotte automobile</div>
+            </div>
+          </a>
+
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.72rem;color:var(--gris);margin-bottom:0.2rem;">Design print événementiel</div>
+            <a href="https://drive.google.com/file/d/1fv_B75qgHQVg0fWwNhorIBMSWN2t4Tqg/view?usp=sharing" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:0.75rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+              <div style="font-size:0.78rem;font-weight:600;">Création stand – visuel 1</div>
+            </a>
+            <a href="https://drive.google.com/file/d/1ZMBivlW_boGeY3RJtJB1vSKIzYfvrckb/view?usp=sharing" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:0.75rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+              <div style="font-size:0.78rem;font-weight:600;">Création stand – visuel 2</div>
+            </a>
+          </div>
+
+          <a href="https://drive.google.com/file/d/18c3Rg0woGt85NzEa4shFkgP9HGSkV1VP/view?usp=sharing" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Guide conducteur</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Support print interne</div>
+            </div>
+          </a>
+
+          <div id="flyer-coyote-card" style="border:1px solid var(--border);border-radius:2px;overflow:hidden;cursor:pointer;" onclick="document.getElementById('flyer-coyote-modal').style.display='flex';" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="padding:1rem 1.2rem;display:flex;align-items:center;gap:0.8rem;">
+              <div>
+                <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Création de flyer</div>
+                <div style="font-size:0.72rem;color:var(--gris);">Support print Coyote Business Services</div>
+              </div>
+              <span style="margin-left:auto;font-size:0.7rem;color:var(--gris);">↗</span>
+            </div>
+          </div>
+
+          <!-- Modal flyer Coyote -->
+          <div id="flyer-coyote-modal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(15,15,15,0.85);z-index:9999;align-items:center;justify-content:center;padding:2rem;">
+            <div style="background:#FAFAF8;border-radius:2px;overflow:hidden;max-width:700px;width:100%;position:relative;">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;border-bottom:1px solid #E2DED8;">
+                <div style="font-size:0.85rem;font-weight:600;">Création de flyer — Coyote Business Services</div>
+                <button onclick="document.getElementById('flyer-coyote-modal').style.display='none'" style="background:none;border:none;font-size:1.3rem;cursor:pointer;color:#6B6B6B;line-height:1;">✕</button>
+              </div>
+              <iframe src="https://drive.google.com/file/d/1S0TjDLUK0vfCR03Lk13dal7OV6hl1n9g/preview" style="width:100%;height:560px;border:none;display:block;" title="Flyer Coyote Business Services"></iframe>
+            </div>
+          </div>
+
+          <a href="https://drive.google.com/file/d/1C5IiHFnkT192PaQRQYXWEEeojl-HBczK/view?usp=sharing" target="_blank" style="display:flex;align-items:center;gap:0.8rem;padding:1rem 1.2rem;border:1px solid var(--border);background:var(--blanc);border-radius:2px;text-decoration:none;color:var(--noir);transition:var(--transition);" onmouseover="this.style.borderColor='var(--noir)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="font-size:0.78rem;font-weight:600;margin-bottom:0.15rem;">Présentation commerciale</div>
+              <div style="font-size:0.72rem;color:var(--gris);">Support de vente</div>
+            </div>
+          </a>
+
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Miam Event -->
+    <div class="exp-item">
+      <div class="exp-header" onclick="toggleExp(this)">
+        <div class="exp-logo-placeholder">Miam<br>Event</div>
+        <div class="exp-info">
+          <div class="exp-company">Miam Event</div>
+          <div class="exp-role">Freelance & Stage Communication & Marketing</div>
+          <div class="exp-period">2024 · Freelance & Stage</div>
+        </div>
+        <div class="exp-arrow">+</div>
+      </div>
+      <div class="exp-body">
+        <p style="font-size:0.92rem; color:var(--gris); line-height:1.8; margin-bottom:1rem;">
+          Gestion et animation des réseaux sociaux de l'agence événementielle, création de contenus visuels et rédactionnels pour les différentes plateformes, création & organisation d'événements.
+        </p>
+        <div class="exp-missions">
+          <span class="mission-tag">Gestion réseaux sociaux</span>
+          <span class="mission-tag">Création de contenu</span>
+          <span class="mission-tag">Planning éditorial</span>
+          <span class="mission-tag">Organisation d'événements</span>
+        </div>
+        <button class="exp-pdf-btn" onclick="togglePdfViewer('pdf-miam', 'Réalisations Miam Event')">
+          &#128196; Voir les réalisations
+        </button>
+        <div class="pdf-viewer" id="pdf-miam">
+          <div class="pdf-viewer-header">
+            <span>Réalisations Miam Event</span>
+            <button class="pdf-close" onclick="closePdfViewer('pdf-miam')">✕</button>
+          </div>
+          <iframe src="https://drive.google.com/file/d/1fImB9MrUtB--NnYjFbDvK7ULTDeeyWMN/preview" style="width:100%;height:600px;border:none;display:block;" title="Réalisations Miam Event"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CCFD -->
+    <div class="exp-item">
+      <div class="exp-header" onclick="toggleExp(this)">
+        <div class="exp-logo-placeholder">CCFD<br>TS</div>
+        <div class="exp-info">
+          <div class="exp-company">CCFD Terre Solidaire</div>
+          <div class="exp-role">Community Management – Gironde & Aquitaine</div>
+          <div class="exp-period">2025 – 2026 · Bénévolat</div>
+        </div>
+        <div class="exp-arrow">+</div>
+      </div>
+      <div class="exp-body">
+        <p style="font-size:0.92rem; color:var(--gris); line-height:1.8; margin-bottom:1rem;">
+          Gestion simultanée des pages Instagram et Facebook des antennes Gironde et Aquitaine du CCFD Terre Solidaire, création de visuels.
+        </p>
+        <div class="exp-missions">
+          <span class="mission-tag">Community management</span>
+          <span class="mission-tag">2 pages simultanées</span>
+          <span class="mission-tag">Instagram & Facebook</span>
+          <span class="mission-tag">Communication engagée</span>
+          <span class="mission-tag">Planning éditorial</span>
+        </div>
+        <button class="exp-pdf-btn" onclick="togglePdfViewer('pdf-ccfd', 'Réalisations CCFD Terre Solidaire')">
+          &#128196; Voir les réalisations
+        </button>
+        <div class="pdf-viewer" id="pdf-ccfd">
+          <div class="pdf-viewer-header">
+            <span>Réalisations CCFD Terre Solidaire</span>
+            <button class="pdf-close" onclick="closePdfViewer('pdf-ccfd')">✕</button>
+          </div>
+          <iframe src="https://drive.google.com/file/d/10wxVDotg3XLFnnshMHkd7OffMnJzEZER/preview" style="width:100%;height:600px;border:none;display:block;" title="Réalisations CCFD Terre Solidaire"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Projets</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="filtres">
+    <button class="filtre-btn active" onclick="filtrer('tous', this)">Tous</button>
+    <button class="filtre-btn" onclick="filtrer('strategie', this)">Stratégie</button>
+    <button class="filtre-btn" onclick="filtrer('campagne', this)">Campagne</button>
+    <button class="filtre-btn" onclick="filtrer('digital', this)">Digital & SEO</button>
+    <button class="filtre-btn" onclick="filtrer('gamification', this)">Gamification</button>
+    <button class="filtre-btn" onclick="filtrer('innovation', this)">Innovation</button>
+    <button class="filtre-btn" onclick="filtrer('evenement', this)">Événementiel</button>
+    <button class="filtre-btn" onclick="filtrer('autres', this)">Autres</button>
+  </div>
+
+  <div class="projets-grid" id="projets-grid">
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('clarte-pfe')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1CXRe7xLRKRazT9Dkm7T7jVp5wSAomPBF&sz=w600" alt="clarte-pfe" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Projet de fin d'études</div>
+        <div class="projet-name">Clarté</div>
+        <div class="projet-desc">Création d'un projet innovant de A à Z : concept, marché, stratégie, RH, juridique et financement.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('caviar-aquitaine')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=12yDLaI1EzrihslOGiwXlpFs9EbVTCPrN&sz=w600" alt="caviar-aquitaine" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Stratégie de communication</div>
+        <div class="projet-name">Caviar d'Aquitaine</div>
+        <div class="projet-desc">Stratégie de communication globale pour une maison de caviar française haut de gamme.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="evenement" onclick="ouvrirModal('ludosens')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1Fd_KZ3C5UJs2mYxldAG7qPrPPNK1yrqs&sz=w600" alt="ludosens" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Événementiel</div>
+        <div class="projet-name">Ludosens</div>
+        <div class="projet-desc">Dossier événement complet pour les 10 ans de l'association – client réel.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="campagne" onclick="ouvrirModal('vinci')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=117EeLBHsIV4lsBNCtNpd-pQ839hDF7gR&sz=w600" alt="vinci" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Campagne · RSE</div>
+        <div class="projet-name">Vinci Autoroutes</div>
+        <div class="projet-desc">Campagne de promotion de l'emploi pour personnes en réinsertion professionnelle.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="evenement" onclick="ouvrirModal('bordeaux-openair')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=176fgameZCs2ZLdeQhzjIWyvvMZU4RgE5&sz=w600" alt="bordeaux-openair" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Événementiel · Campagne</div>
+        <div class="projet-name">Bordeaux Open Air</div>
+        <div class="projet-desc">Campagne événementielle pour conquérir un nouveau public – client réel.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('air-bordeaux')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1nxg8nhiHGyeGiwqX4VzaU8H8AY9Cb8zk&sz=w600" alt="air-bordeaux" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Stratégie · Tourisme responsable</div>
+        <div class="projet-name">Un air de Bordeaux</div>
+        <div class="projet-desc">Campagne de communication touristique responsable pour l'Office du Tourisme.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('lumea')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1gnjAipLHJfP3ALWIG2uC2zjSw7CNb-0J&sz=w600" alt="lumea" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Identité visuelle</div>
+        <div class="projet-name">Luméa</div>
+        <div class="projet-desc">Propositions d'identités graphiques pour un client – projet réel.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('freetv')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1dUPQcRPeJ5WawRFRE4PIlgZCLwoy27Ii&sz=w600" alt="freetv" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Stratégie · Brief réel</div>
+        <div class="projet-name">FreeTV</div>
+        <div class="projet-desc">Réponse à un brief réel avec définition des objectifs stratégiques.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="campagne" onclick="ouvrirModal('jean-louis-david')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1CC4IWlt_K2T0f7DjiHsX0H2h-WRNBX_v&sz=w600" alt="jean-louis-david" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Campagne · Nouvelle cible</div>
+        <div class="projet-name">Jean Louis David</div>
+        <div class="projet-desc">Création d'une campagne de communication pour conquérir une nouvelle cible.</div>
+      
+        <span class="real-badge">★ Projet réel</span>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('real-madrid')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1VQAVgWV5Pv9dZr6-Tb4TucOmsy752BON&sz=w600" alt="real-madrid" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Identité visuelle · Plaquette</div>
+        <div class="projet-name">Real Madrid</div>
+        <div class="projet-desc">Création d'une plaquette de visuels pour le club.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="campagne" onclick="ouvrirModal('color-oil')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1mIT1sz1XYWX3ZMOPxP_gT1BECt6tvWRK&sz=w600" alt="color-oil" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Campagne · Vidéo</div>
+        <div class="projet-name">Color Oil</div>
+        <div class="projet-desc">Vidéo de présentation pour une solution innovante dans le secteur BTP.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="digital" onclick="ouvrirModal('paris-fc')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1sju_6k1l8uE7FQSKxpHCVGnf_8krlWSL&sz=w600" alt="paris-fc" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Digital · SEO · Copywriting</div>
+        <div class="projet-name">Paris FC</div>
+        <div class="projet-desc">Audit SEO, stratégie de contenus, landing page et copywriting pour le club.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('flakon')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1tG_S3XZsjvU_d81CtsbF7gJHxzx-i8aV&sz=w600" alt="flakon" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Innovation · International</div>
+        <div class="projet-name">Flakon</div>
+        <div class="projet-desc">Stratégie d'implantation sur le marché américain – projet mené en anglais.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="campagne" onclick="ouvrirModal('tartare')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1U1Pe1L1xdwp5MPmtea6f1cU6C5tMUdgE&sz=w600" alt="tartare" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Campagne · Brief</div>
+        <div class="projet-name">Tartare</div>
+        <div class="projet-desc">Création d'un brief stratégique pour le lancement d'un nouveau produit.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('cercle-gourmand')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1OCWs3-az3tKQA56oE5XZ7AOpWjm3j43l&sz=w600" alt="cercle-gourmand" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Innovation · RSE</div>
+        <div class="projet-name">Le Cercle Gourmand</div>
+        <div class="projet-desc">Création d'une entreprise RSE : concept, modèle économique et stratégie com.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="digital" onclick="ouvrirModal('klyn')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=19f_T8Q6rJkqxRikmjnfT2tY7HzPbnUa9&sz=w600" alt="klyn" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Digital · SEO</div>
+        <div class="projet-name">KLYN</div>
+        <div class="projet-desc">Benchmark concurrentiel SEO et stratégie SEO complète.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="autres" onclick="ouvrirModal('clinique')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1ZrCUwdTSGULr9LLxxxsT7anfN7_KBpCY&sz=w600" alt="clinique" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;"><div class="projet-overlay"><span>Voir le projet</span></div></div>
+      <div class="projet-info">
+        <div class="projet-cat">Rédaction · Édition</div>
+        <div class="projet-name">Clinique des Champs-Élysées</div>
+        <div class="projet-desc">Conception et rédaction d'un magazine interne pour la clinique.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="campagne" onclick="ouvrirModal('baillardran')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1b6bhzklabdXDSY0_m2yNPCpKKb2j-MIh&sz=w600" alt="baillardran" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;"><div class="projet-overlay"><span>Voir le projet</span></div></div>
+      <div class="projet-info">
+        <div class="projet-cat">Campagne · Communication de crise</div>
+        <div class="projet-name">Canelés Baillardran</div>
+        <div class="projet-desc">Plan de communication de crise pour sortir d'une situation sensible.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="gamification" onclick="ouvrirModal('trivial-pursuit')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1b6bhzklabdXDSY0_m2yNPCpKKb2j-MIh&sz=w600" alt="trivial-pursuit" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Gamification · Secteur public</div>
+        <div class="projet-name">Trivial Pursuit × Ministère de la Culture</div>
+        <div class="projet-desc">Analyse de la gamification et transposition pour le Ministère de la Culture.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="gamification" onclick="ouvrirModal('burger-king')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=185yiikYsKHJwb_VXRu8cFQ_H3Fr-aTnd&sz=w600" alt="burger-king" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Gamification · Analyse</div>
+        <div class="projet-name">Burger King</div>
+        <div class="projet-desc">Analyse de la campagne gamifiée "Escape the Clown" – stratégie et résultats.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="gamification" onclick="ouvrirModal('fnac')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1QkH42E6dv-3vBbzjWKqkD3Svq5nFPR8k&sz=w600" alt="fnac" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Gamification · Digital</div>
+        <div class="projet-name">Fnac Spectacles</div>
+        <div class="projet-desc">Stratégie de gamification pour rendre Fnac Spectacles compétitif face à TicketMaster.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('breakology')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1f80C4UlKT9zSOIF5h6WOAIXLRHGhm1FL&sz=w600" alt="breakology" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Stratégie · Community</div>
+        <div class="projet-name">Breakology</div>
+        <div class="projet-desc">Stratégie de création et d'animation de communauté pour l'entreprise.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="autres" onclick="ouvrirModal('memlinck')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1z92l-18y07_Z23LSxQzc6siAKZGmEfiA&sz=w600" alt="memlinck" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Négociation commerciale · EN</div>
+        <div class="projet-name">Memlinck</div>
+        <div class="projet-desc">Négociations commerciales menées en anglais – compétence bilingue.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="autres" onclick="ouvrirModal('decroissance')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1_2wk6dSAps646b3o3KWz-POkk5vRBzF5&sz=w600" alt="decroissance" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Design · Infographie</div>
+        <div class="projet-name">La Décroissance</div>
+        <div class="projet-desc">Création d'une infographie sur le concept de décroissance économique.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="digital" onclick="ouvrirModal('isegnova')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1PrWXzRvEKwIMlo23sDugU-5UiCV9JzeW&sz=w600" alt="isegnova" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Digital · SEO</div>
+        <div class="projet-name">ISEGNOVA</div>
+        <div class="projet-desc">Campagne SEO complète pour l'école de commerce.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('margot-tita')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1PF3l93dmoRakMxgVnzH2ZAtlhUWejWUq&sz=w600" alt="margot-tita" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Stratégie · Différenciation</div>
+        <div class="projet-name">Margot &amp; Tita</div>
+        <div class="projet-desc">Élaboration d'une stratégie de différenciation et de la communication associée.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="strategie" onclick="ouvrirModal('coyote-audit')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1RArckknuTj-6yzZEpKsAMSrlikPK6mGt&sz=w600" alt="coyote-audit" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Stratégie · Audit</div>
+        <div class="projet-name">Coyote – Audit de communication</div>
+        <div class="projet-desc">Audit de communication complet de l'entreprise Coyote.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="digital" onclick="ouvrirModal('lumea-ads')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1val-yhUV9XNCzfB9Vx6TB_x0c4jM01gj&sz=w600" alt="lumea-ads" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Digital · Google Ads</div>
+        <div class="projet-name">Luméa – Google Ads</div>
+        <div class="projet-desc">Campagne Google Ads pour la promotion des services de Luméa.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('business-plans')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1a7MBli2oUgzk9D3t_W_0TOpVrUvcJNVb&sz=w600" alt="business-plans" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Innovation · Business Plan</div>
+        <div class="projet-name">Qu4tre-Qu4rts &amp; Delikao</div>
+        <div class="projet-desc">Business Plans complets pour deux entreprises fictives.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('coyote-systemique')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1xkeDte6I28DmamcJe-37x_IYHBcugF3k&sz=w600" alt="coyote-systemique" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Innovation · Analyse systémique</div>
+        <div class="projet-name">Coyote – Approche systémique</div>
+        <div class="projet-desc">Analyse systémique complète de l'entreprise Coyote.</div>
+      </div>
+    </div>
+
+    <div class="projet-card" data-cat="innovation" onclick="ouvrirModal('amaya-visuels')">
+      <div class="projet-img-placeholder" style="position:relative;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1bV5Kexis-25pwjAqvZAMVUQPoC9982w7&sz=w600" alt="amaya-visuels" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;">
+      <div class="projet-overlay"><span>Voir le projet</span></div>
+      </div>
+      <div class="projet-info">
+        <div class="projet-cat">Identité visuelle · Création</div>
+        <div class="projet-name">Amaya – Saint Valentin</div>
+        <div class="projet-desc">Création de visuels Saint Valentin pour l'Atelier d'Amaya.</div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- CV / PARCOURS -->
+<section id="cv">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Parcours</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024 – 2025</div>
+      <div class="timeline-title">Master Communication Globale & Stratégies d'influence</div>
+      <div class="timeline-company">ISEG – Bordeaux</div>
+      <div class="timeline-desc">Spécialisation en stratégie globale d'entreprise et en stratégie de communication.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024 – 2026</div>
+      <div class="timeline-title">Alternante Création & Édition de contenu</div>
+      <div class="timeline-company">Coyote – Coyote Business Services</div>
+      <div class="timeline-desc">Production de contenus pour la marque Coyote Business Services (entité B2B) : Gestion de la page LinkedIn, rédaction d'articles, conception de vidéos, de présentations commerciales, de supports commerciaux et marketing en tout genre, rédaction de newsletters, acquisition de leads.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024</div>
+      <div class="timeline-title">Freelance & Stagiaire Community Management</div>
+      <div class="timeline-company">Miam Event · Bordeaux</div>
+      <div class="timeline-desc">Gestion des réseaux sociaux et création de contenus pour l'agence événementielle, création et organisation d'événements B2B.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2025 – 2026</div>
+      <div class="timeline-title">Bénévole Community Management</div>
+      <div class="timeline-company">CCFD Terre Solidaire – Gironde & Aquitaine</div>
+      <div class="timeline-desc">Gestion et animation des pages Instagram et Facebook des antennes Gironde et Aquitaine.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2021 - 2024</div>
+      <div class="timeline-title">Double licence Information Communication - LLCE Espagnol</div>
+      <div class="timeline-company">Université Bordeaux Montaigne - Bordeaux</div>
+      <div class="timeline-desc">Apprentissage des fondamentaux de la communication et du journalisme, apprentissage de l'espagnol et des cultures hispano-américaines.</div>
+    </div>
+
+  </div>
+  <div class="cv-download">
+    <a href="https://drive.google.com/file/d/1REWmCQpluc2USgJTzEsARpSQnGHqjxr_/view?usp=sharing" target="_blank" class="btn-primary">Télécharger mon CV complet →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid" style="grid-template-columns:1fr;">
+    <div>
+      <p class="contact-intro">Disponible pour une opportunité dès septembre 2026.<br>Parlons-en.</p>
+      <div class="contact-links">
+        <a href="mailto:charlotte.labreze@gmail.com" class="contact-link">
+          <span class="contact-link-icon">✉</span>
+          charlotte.labreze@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/charlotte-labreze-9406b7294" target="_blank" class="contact-link">
+          <span class="contact-link-icon">in</span>
+          linkedin.com/in/charlotte-labreze-9406b7294
+        </a>
+        <a href="https://drive.google.com/file/d/1REWmCQpluc2USgJTzEsARpSQnGHqjxr_/view?usp=sharing" target="_blank" class="contact-link">
+          <span class="contact-link-icon">↓</span>
+          Télécharger mon CV
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Charlotte Labreze – Tous droits réservés</span>
+  <div style="display:flex;gap:1.5rem;">
+    <a href="https://www.linkedin.com/in/charlotte-labreze-9406b7294" target="_blank">LinkedIn</a>
+    <a href="mailto:charlotte.labreze@gmail.com">Email</a>
+  </div>
+</footer>
+
+<!-- MODAL PROJET -->
+<div class="modal-overlay" id="modal-overlay" onclick="fermerModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-cat" id="modal-cat"></div>
+        <h3 class="modal-title" id="modal-title"></h3>
+      </div>
+      <button class="modal-close" onclick="fermerModalBtn()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="etude-cas" id="modal-etude"></div>
+      <div class="modal-pdf-section">
+        <div class="modal-pdf-title">Document du projet</div>
+        <div class="modal-pdf-viewer" id="modal-pdf-viewer">
+          <div class="pdf-placeholder">
+            <div class="pdf-placeholder-icon">📄</div>
+            <p>Intègre l'URL Google Drive de ton PDF :<br><code>https://drive.google.com/file/d/TON_ID/preview</code></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Données projets ──
+const projets = {
+  'clarte-pfe': { cat: 'Projet de fin d\'études', real: false, title: 'Clarité – PFE', contexte: 'Projet de fin d\'études du master Communication Globale & Stratégies d\'influence (ISEG Bordeaux).', objectif: 'Création d\'un projet innovant de A à Z.', realise: 'Élaboration d\'un concept · Étude de marché · Plan et stratégie de communication · Organisation RH et juridique · Stratégie financière · Faisabilité du projet via outils marketing.', pdf: 'https://drive.google.com/file/d/1D2bGPLl4u7UM5a8oEQyRHuQNhKC3F7-j/preview' },
+  'color-oil':       { cat: 'Campagne · Vidéo', title: 'Color Oil', contexte: 'Solution innovante dans le secteur BTP.', objectif: 'Présenter la solution de manière percutante en format vidéo.', realise: 'Conception et production d\'une vidéo de présentation.', resultat: 'À compléter avec les retours obtenus.', pdf: 'https://drive.google.com/file/d/1NsqG0rK-ewqCitWzL3SCSf4H3Ssy7QGL/preview' },
+  'paris-fc':        { cat: 'Digital · SEO · Copywriting', title: 'Paris FC', contexte: 'Club de football professionnel souhaitant renforcer sa présence digitale.', objectif: 'Améliorer la visibilité SEO et engager une nouvelle audience.', realise: 'Audit SEO, stratégie de contenus, landing page et copywriting.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1qeSwz2ddau2qCM0RN4pGfwM1cm7qlX-8/preview' },
+  'flakon':          { cat: 'Innovation · International', title: 'Flakon', contexte: 'Entreprise cherchant à s\'implanter sur le marché américain.', objectif: 'Proposer une stratégie d\'entrée sur le marché US adaptée à la culture locale.', realise: 'Étude de marché et stratégie d\'implantation – projet mené intégralement en anglais.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1PyIXVK7ZmMwOWfpnl6sE8kPuSSJIJLsH/preview' },
+  'ludosens':        { cat: 'Événementiel', title: 'Ludosens', contexte: 'Association Ludosens fêtant ses 10 ans d\'existence.', objectif: 'Créer un événement mémorable pour célébrer cette étape clé.', realise: 'Dossier événement complet : concept, organisation logistique, budget prévisionnel.', resultat: 'Projet présenté au client réel.', pdf: 'https://drive.google.com/file/d/1UKQ8jcU9J1rj4G5HFwY4GdreyHLoYfWm/preview' },
+  'tartare':         { cat: 'Campagne · Brief', title: 'Tartare', contexte: 'Marque alimentaire envisageant le lancement d\'un nouveau produit.', objectif: 'Définir le brief stratégique pour encadrer le lancement.', realise: 'Rédaction d\'un brief complet : positionnement, cible, axes créatifs.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1nj3KXKgrwaSvyy_jV4bi46kJWHbC-Rwk/preview' },
+  'cercle-gourmand': { cat: 'Innovation · RSE', title: 'Le Cercle Gourmand', contexte: 'Brief de création d\'entreprise à forte dimension RSE.', objectif: 'Concevoir une entreprise viable et engagée, de A à Z.', realise: 'Concept, organisation économique (Business Model), stratégie de communication.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1Qg0WHFDP_wSz5jaGxVllQMWn3_uGSquT/preview' },
+  'klyn':            { cat: 'Digital · SEO', title: 'KLYN', contexte: 'Marque souhaitant améliorer sa visibilité sur les moteurs de recherche.', objectif: 'Identifier les opportunités SEO et définir une stratégie d\'optimisation.', realise: 'Benchmark concurrentiel SEO et stratégie SEO complète.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1c6E2GVimBm31jor7pLsHVQG0QDQO2NkO/preview' },
+  'vinci':           { cat: 'Campagne · RSE', title: 'Vinci Autoroutes', contexte: 'Vinci Autoroutes souhaitant valoriser l\'emploi de personnes en réinsertion.', objectif: 'Créer une campagne de communication engagée et impactante.', realise: 'Conception et développement d\'une campagne de communication RSE.', resultat: 'Projet présenté au client réel – Vinci Autoroutes.', pdf: 'https://drive.google.com/file/d/100PrNJrikai7LZPOeCrnlIgfjqi8IvNW/preview' },
+  'clinique':        { cat: 'Rédaction · Édition', title: 'Clinique des Champs-Élysées', contexte: 'Clinique cherchant à renforcer la communication interne.', objectif: 'Créer un magazine interne fédérateur pour les équipes.', realise: 'Conception, maquette et rédaction d\'un magazine interne.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1jtLKgW1V0D6xksuXK1JvJHqJYz0ExIMk/preview' },
+  'baillardran':     { cat: 'Communication de crise', title: 'Canelés Baillardran', contexte: 'Marque bordelaise emblématique confrontée à une situation de crise.', objectif: 'Gérer la crise et protéger l\'image de la marque.', realise: 'Plan de communication de crise complet : diagnostic, stratégie, messages clés, planning.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1_YWsj4DPsmayTCGDlQPQjTwhyyekXSZB/preview' },
+  'trivial-pursuit': { cat: 'Gamification · Secteur public', title: 'Trivial Pursuit × Ministère de la Culture', contexte: 'Ministère de la Culture souhaitant moderniser son engagement public.', objectif: 'Appliquer les mécaniques de gamification du Trivial Pursuit au secteur culturel.', realise: 'Analyse des mécaniques de jeu et proposition de transposition pour le Ministère.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1yFFM4e0SofjtZBkQs7uX1qFqnrxsfguB/preview' },
+  'burger-king':     { cat: 'Gamification · Analyse', title: 'Burger King', contexte: 'Campagne "Escape the Clown" de Burger King – cas d\'école de gamification.', objectif: 'Décrypter les mécaniques et mesurer l\'efficacité de la campagne.', realise: 'Analyse stratégique et créative de la campagne gamifiée.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1e7DQdsVC9TiiUgaxTFzWV7Uj1s2zdv1N/preview' },
+  'fnac':            { cat: 'Gamification · Digital', title: 'Fnac Spectacles', contexte: 'Fnac Spectacles en perte de compétitivité face à TicketMaster.', objectif: 'Redonner un avantage concurrentiel à Fnac via la gamification.', realise: 'Stratégie de gamification complète pour Fnac Spectacles.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1bXZhol8MBU4m-z9aEvgfLvmLvaMnFYkD/preview' },
+  'bordeaux-openair':{ cat: 'Événementiel · Campagne', title: 'Bordeaux Open Air', contexte: 'Festival de musique souhaitant attirer un public plus large et plus jeune.', objectif: 'Concevoir une campagne événementielle ciblant un nouveau public.', realise: 'Stratégie et campagne de communication événementielle complète.', resultat: 'Projet présenté au client réel – Bordeaux Open Air.', pdf: 'https://drive.google.com/file/d/1eRBpEmnz7tNwQoeJFVd6VsoNVOKVgMCr/preview' },
+  'air-bordeaux':    { cat: 'Stratégie · Tourisme responsable', title: 'Un air de Bordeaux', contexte: 'Office du Tourisme de Bordeaux souhaitant promouvoir la ville de façon responsable.', objectif: 'Créer une campagne touristique respectant les codes de la communication responsable.', realise: 'Stratégie et campagne de communication touristique complète, axée durabilité.', resultat: 'Projet présenté à l\'Office du Tourisme de Bordeaux.', pdf: 'https://drive.google.com/file/d/1Akohz1yGk8s4zgFL7OtEAET1JXPXk-QQ/preview' },
+  'breakology':      { cat: 'Stratégie · Community', title: 'Breakology', contexte: 'Entreprise souhaitant développer et animer sa communauté en ligne.', objectif: 'Définir une stratégie de création et d\'animation communautaire.', realise: 'Stratégie complète de community building, planning éditorial, KPIs.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/13zwg0-TNl2LjsyqNQUwXbJ3RyYnWX33H/preview' },
+  'memlinck':        { cat: 'Négociation commerciale · EN', title: 'Memlinck', contexte: 'Simulation de négociations commerciales en contexte international.', objectif: 'Mener des négociations efficaces en anglais dans un contexte B2B.', realise: 'Négociations commerciales conduites intégralement en anglais.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1TuHBzkrm_wYiXr3Rz3xKjUx5FLfXq3N0/preview' },
+  'decroissance':    { cat: 'Design · Infographie', title: 'La Décroissance', contexte: 'Concept économique et sociétal complexe à vulgariser.', objectif: 'Rendre accessible le concept de décroissance via un format visuel.', realise: 'Conception d\'une infographie claire et pédagogique sur la décroissance.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1r4_ldVk5Dx6tjzGQOm6KKM0pb9giqsok/preview' },
+  'lumea':           { cat: 'Identité visuelle', title: 'Luméa', contexte: 'Client réel en recherche d\'identité graphique pour sa marque.', objectif: 'Proposer plusieurs directions créatives d\'identité graphique.', realise: 'Conception de plusieurs propositions d\'identités visuelles distinctes.', resultat: 'Propositions présentées au client réel.', pdf: 'https://drive.google.com/file/d/1GPMgYk6SxXPYzJeHaLJkjBXJR4PDJj_k/preview' },
+  'isegnova':        { cat: 'Digital · SEO', title: 'ISEGNOVA', contexte: 'École de commerce souhaitant renforcer sa visibilité sur les moteurs de recherche.', objectif: 'Concevoir et mettre en œuvre une campagne SEO ciblée.', realise: 'Campagne SEO complète avec audit, mots-clés, recommandations de contenus.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1XdJykGodzaVYKqWFOLXACAYr3VjHt_4Y/preview' },
+  'freetv':              { cat: 'Stratégie · Brief réel', title: 'FreeTV', contexte: 'Réponse à un brief réel posé par FreeTV.', objectif: 'Proposer une réponse stratégique précise aux objectifs du client.', realise: 'Analyse du brief, définition des objectifs et plan d\'action stratégique.', resultat: 'Projet présenté au client réel – FreeTV.', pdf: 'https://drive.google.com/file/d/1IANh-abbiDxbi004xEZxTUcnA9Jls8wp/preview' },
+  'margot-tita':         { cat: 'Stratégie · Différenciation', title: 'Margot & Tita', contexte: 'Marque cherchant à se distinguer dans un marché concurrentiel.', objectif: 'Définir une stratégie de différenciation claire et sa communication associée.', realise: 'Élaboration de la stratégie de différenciation et du plan de communication.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1t2w3tX8ZX2XG07CXhpTNHy0o3jJiBEJj/preview' },
+  'coyote-audit':        { cat: 'Stratégie · Audit', title: 'Coyote – Audit de communication', contexte: 'Analyse approfondie de la stratégie de communication de Coyote.', objectif: 'Identifier les forces, faiblesses et opportunités de la communication existante.', realise: 'Audit de communication complet : analyse des supports, messages, cibles et canaux.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1H4RKu41btD5DtbtvcZZ3ZwGnZxNnCkr9/preview' },
+  'jean-louis-david':    { cat: 'Campagne', title: 'Jean Louis David', contexte: 'Enseigne de coiffure souhaitant rajeunir et élargir sa clientèle.', objectif: 'Concevoir une campagne de communication ciblant une nouvelle audience.', realise: 'Création complète d\'une campagne de communication pour une nouvelle cible.', resultat: 'Projet présenté au client réel – Jean Louis David.', pdf: 'https://drive.google.com/file/d/1_pK8OSj6WyyQE-mXPv5tqWAm2k-N_349/preview' },
+  'lumea-ads':           { cat: 'Digital · Google Ads', title: 'Luméa – Google Ads', contexte: 'Luméa souhaitant accroître sa visibilité et ses conversions en ligne.', objectif: 'Créer et optimiser une campagne Google Ads pour promouvoir ses services.', realise: 'Stratégie, conception et paramétrage d\'une campagne Google Ads complète.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1H4RKu41btD5DtbtvcZZ3ZwGnZxNnCkr9/preview' },
+  'business-plans':      { cat: 'Innovation · Business Plan', title: 'Qu4tre-Qu4rts & Delikao', contexte: 'Exercice de création d\'entreprise sur deux concepts fictifs distincts.', objectif: 'Modéliser la viabilité économique et stratégique de deux projets entrepreneuriaux.', realise: 'Business Plans complets : étude de marché, modèle économique, stratégie de lancement.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1dSD2FcahOzJuY3xjBzXYwyRp6uPnkQIn/preview' },
+  'coyote-systemique':   { cat: 'Innovation · Analyse systémique', title: 'Coyote – Approche systémique', contexte: 'Analyse de Coyote en tant que système organisationnel complexe.', objectif: 'Comprendre les interactions internes et externes de l\'entreprise.', realise: 'Approche systémique complète : cartographie des acteurs, flux, interdépendances.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1x8BF_dVTEhMRsQg9imR_LU0HLEEHJEfd/preview' },
+  'amaya-visuels':       { cat: 'Identité visuelle · Création', title: 'Amaya – Saint Valentin', contexte: 'L\'Atelier d\'Amaya souhaitant animer la Saint Valentin sur ses réseaux.', objectif: 'Créer des visuels attractifs et cohérents avec l\'identité de la marque.', realise: 'Création d\'une série de visuels pour la campagne Saint Valentin.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1jtr2qHYuOADVa8IlxJgdWHSx7qUWvIBt/preview' },
+  'caviar-aquitaine':    { cat: 'Stratégie', real: true, title: "Caviar d'Aquitaine", contexte: "Maison de caviar française haut de gamme, ancrée dans le terroir aquitain.", objectif: "Élaborer une stratégie de communication globale pour développer la notoriété et renforcer le positionnement premium de la marque.", livrables: "Analyse de marché, positionnement, axes de communication, plan d'action et supports de campagne.", resultat: 'Projet réel.', pdf: 'https://drive.google.com/file/d/1RMC_Z8mN3PGSDGZmeh3A6_ESlm4xFlY9/preview' },
+  'real-madrid':         { cat: 'Identité visuelle · Plaquette', title: 'Real Madrid', contexte: 'Exercice de création visuelle autour du club de football Real Madrid.', objectif: 'Concevoir une plaquette de visuels cohérente et impactante.', realise: 'Création d\'une plaquette graphique complète aux couleurs du club.', resultat: 'À compléter.', pdf: 'https://drive.google.com/file/d/1_J0_RdsZFZXv8acQyExXYW-fVBqlNE5j/preview' },
+};
+
+function ouvrirModal(id) {
+  const p = projets[id];
+  if (!p) return;
+  document.getElementById('modal-cat').textContent = p.cat;
+  document.getElementById('modal-title').textContent = p.title;
+  document.getElementById('modal-etude').innerHTML = `
+    <div class="etude-block"><div class="etude-label">Contexte</div><div class="etude-content">${p.contexte}</div></div>
+    <div class="etude-block"><div class="etude-label">Objectif</div><div class="etude-content">${p.objectif}</div></div>
+    <div class="etude-block"><div class="etude-label">Actions menées</div><div class="etude-content">${p.realise}</div></div>
+    
+  `;
+  const pdfViewer = document.getElementById('modal-pdf-viewer');
+  if (p.pdf) {
+    pdfViewer.innerHTML = `<iframe src="${p.pdf}" title="Document ${p.title}"></iframe>`;
+  } else {
+    pdfViewer.innerHTML = `<div class="pdf-placeholder"><div class="pdf-placeholder-icon">📄</div><p>PDF à intégrer – remplace la valeur <code>pdf</code> dans le JS pour ce projet par ton lien Google Drive.</p></div>`;
+  }
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function fermerModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) fermerModalBtn();
+}
+
+function fermerModalBtn() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function filtrer(cat, btn) {
+  document.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const cards = document.querySelectorAll('.projet-card');
+  cards.forEach(card => {
+    const match = cat === 'tous' || card.dataset.cat === cat;
+    if (match) {
+      card.style.display = '';
+      requestAnimationFrame(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      });
+    } else {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(8px)';
+      setTimeout(() => {
+        if (card.style.opacity === '0') card.style.display = 'none';
+      }, 280);
+    }
+  });
+}
+
+function toggleExp(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.exp-arrow');
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.exp-body.open').forEach(b => {
+    b.classList.remove('open');
+    b.previousElementSibling.querySelector('.exp-arrow').textContent = '+';
+  });
+  if (!isOpen) {
+    body.classList.add('open');
+    arrow.textContent = '−';
+  }
+}
+
+function togglePdfViewer(id, titre) {
+  var viewer = document.getElementById(id);
+  viewer.classList.toggle('open');
+}
+
+function closePdfViewer(id) {
+  document.getElementById(id).classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') fermerModalBtn();
+});
+</script>
+
+</body>
+</html>
